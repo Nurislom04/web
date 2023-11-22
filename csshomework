@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS HOMEWORK</title>
+  <style>
+    body,
+    html {
+      height: 100%;
+      
+      margin: 0;
+      text-align: center;
+      font-family: 'Source Sans Pro', sans-serif;
+
+    }
+
+    .intro {
+      
+      background-image: url(images/gifbg.gif);
+      margin: 0;
+      padding: 20px;
+      margin-bottom: 0px;
+    }
+
+    .intro h1 {
+      font-size: 50px;
+      margin: 0;
+      padding: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      color: rgb(255, 255, 255);
+    }
+
+    
+    .main {
+      background-image: url(images/albumbg.jpg);
+      background-repeat: repeat-y;
+      background-size: cover;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 20px;
+      color: #a74e0f;
+      margin: 0;
+      padding: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      
+    }
+
+    .main p{text-align: justify;
+      padding: 20px;
+    }
+
+    .button{
+      border-radius: 30px;
+      width: 500px;
+      height: 50px;
+      margin-bottom: 30px;
+      background-color: #a74e0f ;
+      border: 0px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      color: #fff;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 25px;
+    }
+
+    .button:hover{background-color: #7c390a;}
+
+    .smaller-image {
+      max-width: 300px;
+      height: auto;
+      cursor: pointer;
+      box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+      margin-right: 20px;
+      border-radius: 20px;
+      transition: filter 0.3s ease-in-out;
+    }
+
+    .smaller-image:hover{filter: brightness(40%);}
+
+    .fullscreen-image {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+    }
+
+    .fullscreen-image img {
+      max-width: calc(100% - 40px);
+      max-height: calc(100% - 40px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .close-button {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 42px;
+      z-index: 10000;
+    }
+
+    .checkbox {
+      display: none;
+    }
+
+    input[id="fullscreen-toggle1"]:checked+.fullscreen-image1 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle2"]:checked+.fullscreen-image2 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle3"]:checked+.fullscreen-image3 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle4"]:checked+.fullscreen-image4 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle5"]:checked+.fullscreen-image5 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle6"]:checked+.fullscreen-image6 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle7"]:checked+.fullscreen-image7 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle8"]:checked+.fullscreen-image8 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle9"]:checked+.fullscreen-image9 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle10"]:checked+.fullscreen-image10 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle11"]:checked+.fullscreen-image11 {
+      display: block;
+    }
+
+    input[id="fullscreen-toggle12"]:checked+.fullscreen-image12 {
+      display: block;
+    }
+
+
+    .footer{text-align: center;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 20px;
+      
+      
+    }
+
+
+    .icon{
+      width: 50px;
+      padding: 20px;
+      transition: filter 0.3s ease-in-out;
+    }
+
+
+    .icon:hover{filter: brightness(60%);}
+
+    
+
+  </style>
+</head>
+
+<body>
+  <div class="intro">
+    <h1>CSS HOMEWORK</h1>
+  </div>
+  <div class="main">
+      <p>Goats, hardy and adaptable creatures, thrive in diverse landscapes, navigating rocky terrains and arid regions with ease. Revered for their resilience, they embody a symbiotic relationship with humanity that transcends their utilitarian roles.
+
+        Their nutritious milk, easier to digest than cow's milk, forms a cornerstone in global dairy traditions. Beyond their nutritional value, goats weave themselves into cultural narratives and folklore, symbolizing agility and fertility across ancient tales.
+        
+        Within social herds, goats display complex behaviors, establishing hierarchies and nurturing social connections through playful interactions. Their intelligence and emotional depth shine through in their gentle grooming and nuanced communication.
+        
+        In modern contexts, goats extend beyond agriculture, offering therapeutic companionship in animal-assisted interventions. Their calming presence fosters healing and emotional well-being in various therapeutic settings, showcasing their innate capacity for empathy.
+        
+        As they graze across diverse landscapes, goats embody a captivating blend of resilience, cultural significance, and ecological contributions that captivate and enrich human societies globally.
+      </p>
+
+      <button class="button">CLICK</button>
+
+    <br><br>
+    <label for="fullscreen-toggle1">
+      <img src="images/echki1.jpg" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle1" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image1">
+      <label for="fullscreen-toggle1" class="close-button">&times;</label>
+      <img src="images/echki1.jpg">
+    </div>
+
+
+
+
+    <label for="fullscreen-toggle2">
+      <img src="images/echki2.jpg" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle2" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image2">
+      <label for="fullscreen-toggle2" class="close-button">&times;</label>
+      <img src="images/echki2.jpg">
+    </div>
+
+
+
+
+    <label for="fullscreen-toggle3">
+      <img src="images/echki3.jpg" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle3" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image3">
+      <label for="fullscreen-toggle3" class="close-button">&times;</label>
+      <img src="images/echki3.jpg">
+    </div>
+    <br>
+
+
+
+
+    <label for="fullscreen-toggle4">
+      <img src="images/echki4.jpg" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle4" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image4">
+      <label for="fullscreen-toggle4" class="close-button">&times;</label>
+      <img src="images/echki4.jpg">
+    </div>
+
+
+
+
+    <label for="fullscreen-toggle5">
+      <img src="images/echki5.jpg" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle5" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image5">
+      <label for="fullscreen-toggle5" class="close-button">&times;</label>
+      <img src="images/echki5.jpg">
+    </div>
+
+
+
+
+    <label for="fullscreen-toggle6">
+      <img src="images/echki6.jpg" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle6" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image6">
+      <label for="fullscreen-toggle6" class="close-button">&times;</label>
+      <img src="images/echki6.jpg">
+    </div>
+    <br>
+
+
+
+
+    <label for="fullscreen-toggle7">
+      <img src="images/echki7.jpg" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle7" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image7">
+      <label for="fullscreen-toggle7" class="close-button">&times;</label>
+      <img src="images/echki7.jpg">
+    </div>
+
+
+
+
+    <label for="fullscreen-toggle8">
+      <img src="images/echki8.jpg" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle8" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image8">
+      <label for="fullscreen-toggle8" class="close-button">&times;</label>
+      <img src="images/echki8.jpg">
+    </div>
+
+
+
+
+    <label for="fullscreen-toggle9">
+      <img src="images/echki9.jpg" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle9" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image9">
+      <label for="fullscreen-toggle9" class="close-button">&times;</label>
+      <img src="images/echki9.jpg">
+    </div>
+    <br>
+
+
+
+
+    <label for="fullscreen-toggle10">
+      <img
+        src="images/echki12.jpg"
+        class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle10" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image10">
+      <label for="fullscreen-toggle10" class="close-button">&times;</label>
+      <img
+        src="images/echki12.jpg">
+    </div>
+
+
+
+    <label for="fullscreen-toggle11">
+      <img src="images/echki10.png" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle11" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image11">
+      <label for="fullscreen-toggle11" class="close-button">&times;</label>
+      <img src="images/echki10.png">
+    </div>
+
+
+
+    <label for="fullscreen-toggle12">
+      <img src="images/echki11.png" class="smaller-image">
+    </label>
+
+    <input type="checkbox" id="fullscreen-toggle12" class="checkbox">
+
+    <div class="fullscreen-image  fullscreen-image12">
+      <label for="fullscreen-toggle12" class="close-button">&times;</label>
+      <img src="images/echki11.png">
+    </div>
+
+
+
+    <div class="footer">
+      <h1>Footer</h1>
+      <h3>Address</h3>
+      <h6>Sergeli, Tashkent, Uzbekistan</h6>
+      <h3>Contact info</h3>
+      <h6>+99897 777-77-77</h6>
+      <h3>Follow on social media</h3>
+      <a href="https://www.instagram.com/"   target="_blank"><img src="images/instagram_icon-removebg-preview.png" class="icon"></a>
+      <a href="https://web.telegram.org/a/"   target="_blank"> <img src="images/telegram_icon-removebg-preview.png" class="icon"></a>
+      <a href="https://www.youtube.com/"   target="_blank"><img src="images/youtube_icon-removebg-preview.png" class="icon"></a>
+      
+     
+      
+    </div>
+  </div>
+</body>
+
+</html>
